@@ -1,0 +1,96 @@
+{
+    "dashboardTitle": "Caracteriza\u00e7\u00e3o do Dataset - covid19",
+    "pages": [
+        {
+            "name": "Vis\u00e3o Geral",
+            "visualizations": [
+                {
+                    "title": "N\u00famero Total de Registros",
+                    "type": "card",
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 8,
+                        "height": 4
+                    },
+                    "data": {
+                        "source": "covid19_para_bi.csv",
+                        "measure": "COUNT()"
+                    }
+                },
+                {
+                    "title": "Completude dos Dados",
+                    "type": "heatmap",
+                    "position": {
+                        "x": 8,
+                        "y": 0,
+                        "width": 16,
+                        "height": 12
+                    },
+                    "data": {
+                        "source": "covid19_valores_ausentes.png"
+                    }
+                },
+                {
+                    "title": "Distribui\u00e7\u00e3o Temporal",
+                    "type": "column_chart",
+                    "position": {
+                        "x": 0,
+                        "y": 12,
+                        "width": 24,
+                        "height": 12
+                    },
+                    "data": {
+                        "source": "covid19_contagem_por_ano.csv",
+                        "xAxis": "ano",
+                        "yAxis": "contagem"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "An\u00e1lise Detalhada",
+            "visualizations": [
+                {
+                    "title": "Estat\u00edsticas Principais",
+                    "type": "table",
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 24,
+                        "height": 8
+                    },
+                    "data": {
+                        "source": "covid19_estatisticas.csv"
+                    }
+                },
+                {
+                    "title": "Distribui\u00e7\u00f5es",
+                    "type": "image",
+                    "position": {
+                        "x": 0,
+                        "y": 8,
+                        "width": 12,
+                        "height": 12
+                    },
+                    "data": {
+                        "source": "covid19_histograma_valor.png"
+                    }
+                },
+                {
+                    "title": "Correla\u00e7\u00f5es",
+                    "type": "image",
+                    "position": {
+                        "x": 12,
+                        "y": 8,
+                        "width": 12,
+                        "height": 12
+                    },
+                    "data": {
+                        "source": "covid19_correlacao.png"
+                    }
+                }
+            ]
+        }
+    ]
+}
